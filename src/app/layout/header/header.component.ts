@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
+import { TokenStorageService } from 'src/app/auth/token-storage.service';
 
 @Component({
   selector: 'app-header',
@@ -7,14 +8,20 @@ import { Location } from '@angular/common';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  info: any;
 
-  constructor(public location: Location) { }
+  constructor(private token: TokenStorageService) { }
 
   ngOnInit() {
+    this.info = {
+      token: this.token.getToken(),
+      username: this.token.getUsername(),
+      authories: this.token.getAuthorities()
+    };
   }
 
-  pageRefresh() {
-    location.reload();
+  logout() {
+    this.token.signOut();
+    window.location.reload();
   }
-
 }

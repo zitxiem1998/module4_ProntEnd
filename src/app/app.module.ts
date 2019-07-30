@@ -31,6 +31,8 @@ import { BookingHouseComponent } from './components/houses/booking-house/booking
 import { ProfileComponent } from './components/accounts/profile/profile.component';
 import { ListHouseComponent } from './components/houses/list-house/list-house.component';
 import { Ng5SliderModule } from 'ng5-slider';
+import { ShowAuthedDirective } from './shared/show-authed.directive';
+import { FeedbackHouseComponent } from './components/houses/feedback-house/feedback-house.component';
 
 // Configs 
 export function getAuthServiceConfigs() {
@@ -59,7 +61,9 @@ export function getAuthServiceConfigs() {
     HomeComponent,
     BookingHouseComponent,
     ProfileComponent,
-    ListHouseComponent
+    ListHouseComponent,
+    ShowAuthedDirective,
+    FeedbackHouseComponent
   ],
 
   entryComponents: [
