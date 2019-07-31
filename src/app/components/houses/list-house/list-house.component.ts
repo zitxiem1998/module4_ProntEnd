@@ -24,6 +24,7 @@ export class ListHouseComponent implements OnInit {
 
   ngOnInit() {
     this.loadData(0);
+    console.log(this.houses);
   }
   loadData(page){
     this.numOfBedroom=="" ? this.numBed=[1,2,3,4] : this.numBed=[parseInt(this.numOfBedroom)];
