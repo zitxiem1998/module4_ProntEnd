@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { ReactiveFormsModule,FormsModule } from "@angular/forms"
+import { ReactiveFormsModule, FormsModule } from "@angular/forms"
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/accounts/login/login.component';
@@ -22,15 +22,21 @@ import { ManageHouseComponent } from './components/houses/manage-house/manage-ho
 import { httpInterceptorProviders } from './auth/auth-interceptor';
 import { HeaderComponent } from './layout/header/header.component';
 import { ViewHouseComponent } from './components/houses/view-house/view-house.component';
-import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule,MatDividerModule,MatGridListModule } 
-from '@angular/material';
+import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatDividerModule, MatGridListModule }
+  from '@angular/material';
+import { MatRadioModule } from '@angular/material';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FooterComponent } from './layout/footer/footer.component';
 import { HomeComponent } from './layout/home/home.component';
 import { BookingHouseComponent } from './components/houses/booking-house/booking-house.component';
 import { ProfileComponent } from './components/accounts/profile/profile.component';
 import { ListHouseComponent } from './components/houses/list-house/list-house.component';
+import { ListAccountComponent } from './components/accounts/list-account/list-account.component'
+
 import { Ng5SliderModule } from 'ng5-slider';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material';
+import { UpdateUserInformationComponent } from './components/accounts/update-user-information/update-user-information.component';
 
 // Configs 
 export function getAuthServiceConfigs() {
@@ -59,7 +65,9 @@ export function getAuthServiceConfigs() {
     HomeComponent,
     BookingHouseComponent,
     ProfileComponent,
-    ListHouseComponent
+    ListHouseComponent,
+    ListAccountComponent,
+    UpdateUserInformationComponent,
   ],
 
   entryComponents: [
@@ -79,7 +87,11 @@ export function getAuthServiceConfigs() {
     NgxGalleryModule,
     FormsModule,
     SocialLoginModule,
-    Ng5SliderModule
+    Ng5SliderModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatRadioModule,
+    
   ],
   providers: [
     {
