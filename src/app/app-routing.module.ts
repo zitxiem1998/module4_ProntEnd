@@ -11,8 +11,12 @@ import { HeaderComponent } from './layout/header/header.component';
 import { BookingHouseComponent } from './components/houses/booking-house/booking-house.component';
 import { ListHouseComponent } from './components/houses/list-house/list-house.component';
 import { ViewHouseComponent } from './components/houses/view-house/view-house.component';
+
 import { ListAccountComponent } from './components/accounts/list-account/list-account.component';
 import { UpdateUserInformationComponent } from './components/accounts/update-user-information/update-user-information.component';
+
+import { ProfileComponent } from './components/accounts/profile/profile.component';
+import { FeedbackHouseComponent } from './components/houses/feedback-house/feedback-house.component';
 
 const routes: Routes = [
   {
@@ -25,12 +29,18 @@ const routes: Routes = [
   { path: "view-house/:id", component: ViewHouseComponent },
   { path: "manage-house", component: ManageHouseComponent },
   { path: "home", component: HomeComponent },
-  { path: "houses", component: ListHouseComponent},
-   { path: "booking-house", component: BookingHouseComponent },
+  { path: "houses", component: ListHouseComponent },
+  { path: "booking-house", component: BookingHouseComponent },
   { path: "", redirectTo: "home", pathMatch: "full" },
+
   { path: "list-account", component: ListAccountComponent },
   { path: 'update-user-information/:id', component: UpdateUserInformationComponent },
 
+  {path : 'feedback-house', component : FeedbackHouseComponent},
+  {
+    path: "Profile/:info",
+    component: ProfileComponent
+  },
 
 ];
 
@@ -39,4 +49,4 @@ const routes: Routes = [
 
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

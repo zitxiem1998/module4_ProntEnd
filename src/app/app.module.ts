@@ -34,9 +34,14 @@ import { ListHouseComponent } from './components/houses/list-house/list-house.co
 import { ListAccountComponent } from './components/accounts/list-account/list-account.component'
 
 import { Ng5SliderModule } from 'ng5-slider';
+
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material';
 import { UpdateUserInformationComponent } from './components/accounts/update-user-information/update-user-information.component';
+
+import { ShowAuthedDirective } from './shared/show-authed.directive';
+import { FeedbackHouseComponent } from './components/houses/feedback-house/feedback-house.component';
+
 
 // Configs 
 export function getAuthServiceConfigs() {
@@ -66,8 +71,13 @@ export function getAuthServiceConfigs() {
     BookingHouseComponent,
     ProfileComponent,
     ListHouseComponent,
+
     ListAccountComponent,
     UpdateUserInformationComponent,
+
+    ShowAuthedDirective,
+    FeedbackHouseComponent
+
   ],
 
   entryComponents: [
