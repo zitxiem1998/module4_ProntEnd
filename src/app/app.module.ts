@@ -101,7 +101,8 @@ export function getAuthServiceConfigs() {
     MatTableModule,
     MatPaginatorModule,
     MatRadioModule,
-    
+    MatGridListModule,
+    MatListModule
   ],
   providers: [
     {

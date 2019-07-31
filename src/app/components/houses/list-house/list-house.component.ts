@@ -24,7 +24,7 @@ export class ListHouseComponent implements OnInit {
 
   ngOnInit() {
     this.loadData(0);
-  }
+  } 
   loadData(page){
     this.numOfBedroom=="" ? this.numBed=[1,2,3,4] : this.numBed=[parseInt(this.numOfBedroom)];
     this.typeOfBedroom=="" ? this.typeBed=["Vip","Standard"] : this.typeBed=[this.typeMapper[this.typeOfBedroom]];
