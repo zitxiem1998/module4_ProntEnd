@@ -1,4 +1,4 @@
-<body class="profile-page sidebar-collapse" *ngIf="info.token;">
+<body class="profile-page sidebar-collapse" *appShowAuthed="true">
     <!-- Extra details for Live View on GitHub Pages -->
     <!-- Google Tag Manager (noscript) -->
     <noscript>
@@ -106,7 +106,7 @@
                                 </ul>
                                 <hr>
                                 <h4 class="title">Sharing experiences </h4>
-                                <a href="/" class="material-icons">comment</a>
+                                <a routerLink="/feedback-house" class="material-icons">comment</a>
                                 <span class="meida">Comment</span>
                                 <hr>
                                 <h3 class="title">Follow Us</h3>
