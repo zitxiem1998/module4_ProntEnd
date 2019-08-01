@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA  } from '@angular/core';
 
 import { ReactiveFormsModule, FormsModule } from "@angular/forms"
 import { AppRoutingModule } from './app-routing.module';
@@ -22,7 +22,7 @@ import { ManageHouseComponent } from './components/houses/manage-house/manage-ho
 import { httpInterceptorProviders } from './auth/auth-interceptor';
 import { HeaderComponent } from './layout/header/header.component';
 import { ViewHouseComponent } from './components/houses/view-house/view-house.component';
-import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatDividerModule, MatGridListModule }
+import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatDividerModule, MatGridListModule, MatFormFieldModule, MatInputModule, MatRippleModule }
   from '@angular/material';
 import { MatRadioModule } from '@angular/material';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -41,6 +41,11 @@ import { UpdateUserInformationComponent } from './components/accounts/update-use
 
 import { ShowAuthedDirective } from './shared/show-authed.directive';
 import { FeedbackHouseComponent } from './components/houses/feedback-house/feedback-house.component';
+import { SearchHouseComponent } from './components/houses/search-house/search-house.component';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import {MatExpansionModule} from '@angular/material/expansion';
+
 
 
 // Configs 
@@ -76,7 +81,9 @@ export function getAuthServiceConfigs() {
     UpdateUserInformationComponent,
 
     ShowAuthedDirective,
-    FeedbackHouseComponent
+    FeedbackHouseComponent,
+
+    SearchHouseComponent
 
   ],
 
@@ -101,7 +108,14 @@ export function getAuthServiceConfigs() {
     MatTableModule,
     MatPaginatorModule,
     MatRadioModule,
-    
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatRippleModule,
+    CommonModule,
+    RouterModule,
+    NgbModule,
+    MatExpansionModule
   ],
   providers: [
     {
@@ -110,6 +124,8 @@ export function getAuthServiceConfigs() {
     },
     httpInterceptorProviders
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
+
 })
 export class AppModule { }
