@@ -33,6 +33,7 @@ export class ViewHouseComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       if(result) {
         console.log('Yes clicked');
+        alert("đăng kí thành công")
         // DO SOMETHING
       }
     });

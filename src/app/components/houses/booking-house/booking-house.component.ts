@@ -70,8 +70,6 @@ export class BookingHouseComponent implements OnInit {
       ])),
       birthday: new FormControl('', Validators.compose([
         Validators.required,
-        Validators.min(18),
-        Validators.max(70)
       ])),
       gender: new FormControl('', Validators.compose([
         Validators.required,
@@ -79,9 +77,6 @@ export class BookingHouseComponent implements OnInit {
       phone: new FormControl('', Validators.compose([
         Validators.required,
         Validators.pattern(/^0\d{9,10}$/),
-      ])),
-      address: new FormControl('', Validators.compose([
-        Validators.required,
       ])),
       checkIn: new FormControl('', Validators.compose([
         Validators.required,
@@ -96,12 +91,13 @@ export class BookingHouseComponent implements OnInit {
         Validators.required,
         Validators.pattern(/^\d{1}$/),
       ])),
-      desciptionBookingHouse: new FormControl('', Validators.compose([
+      descriptionBookingHouse: new FormControl('', Validators.compose([
         Validators.required,
       ])),
     })
   }
   onSubmitRegisters() {
+    console.log("abc");
     if (this.registerForm.valid) {
       this.booking = new Booking(
         this.form.fullName,
@@ -112,11 +108,15 @@ export class BookingHouseComponent implements OnInit {
         this.form.checkIn,
         this.form.checkOut,
         this.form.amount,
-        this.form.desciptionBookingHouse
+        this.form.descriptionBookingHouse
       );
+      console.log("abc");
       this.bookingService.createNewBooking(this.booking).subscribe(res => {
-        alert("Đặt nhà thành công")
+  
+        alert("Đặt nhà thành công");
       })
+    }else{
+      console.log(this.registerForm)
     }
   }
 }

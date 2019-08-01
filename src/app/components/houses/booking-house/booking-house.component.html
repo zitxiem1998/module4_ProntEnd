@@ -109,8 +109,8 @@
                 </mat-form-field>
 
                 <mat-form-field class="full-width">
-                    <textarea matInput placeholder="Desciption" [(ngModel)]="form.desciptionBookingHouse"
-                        formControlName="desciptionBookingHouse" required></textarea>
+                    <textarea matInput placeholder="Description" [(ngModel)]="form.descriptionBookingHouse"
+                        formControlName="descriptionBookingHouse" required></textarea>
                     <mat-error *ngFor="let validation of validation_messages.desciptionBookingHouse">
                         <mat-error class="error-message"
                             *ngIf="registerForm.get('desciptionBookingHouse').hasError(validation.type) && (registerForm.get('desciptionBookingHouse').dirty || registerForm.get('desciptionBookingHouse').touched)">

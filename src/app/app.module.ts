@@ -31,6 +31,7 @@ import { BookingHouseComponent } from './components/houses/booking-house/booking
 import { ProfileComponent } from './components/accounts/profile/profile.component';
 import { ListHouseComponent } from './components/houses/list-house/list-house.component';
 import { Ng5SliderModule } from 'ng5-slider';
+import { CancelBookingComponent } from './components/houses/cancel-booking/cancel-booking.component';
 
 // Configs 
 export function getAuthServiceConfigs() {
@@ -59,7 +60,8 @@ export function getAuthServiceConfigs() {
     HomeComponent,
     BookingHouseComponent,
     ProfileComponent,
-    ListHouseComponent
+    ListHouseComponent,
+    CancelBookingComponent
   ],
 
   entryComponents: [
