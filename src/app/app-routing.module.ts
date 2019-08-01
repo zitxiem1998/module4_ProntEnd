@@ -17,6 +17,7 @@ import { UpdateUserInformationComponent } from './components/accounts/update-use
 
 import { ProfileComponent } from './components/accounts/profile/profile.component';
 import { FeedbackHouseComponent } from './components/houses/feedback-house/feedback-house.component';
+import { SearchHouseComponent } from './components/houses/search-house/search-house.component';
 
 const routes: Routes = [
   {
@@ -32,6 +33,8 @@ const routes: Routes = [
   { path: "houses", component: ListHouseComponent },
   { path: "booking-house", component: BookingHouseComponent },
   { path: "", redirectTo: "home", pathMatch: "full" },
+  { path: 'search-house', component:SearchHouseComponent,},
+
 
   { path: "list-account", component: ListAccountComponent },
   { path: 'update-user-information/:id', component: UpdateUserInformationComponent },
