@@ -34,6 +34,9 @@ const routes: Routes = [
   { path: "booking-house", component: BookingHouseComponent },
   { path: "", redirectTo: "home", pathMatch: "full" },
   { path: 'search-house', component:SearchHouseComponent,},
+  { path: 'list-house', component:ListHouseComponent,},
+
+
 
 
   { path: "list-account", component: ListAccountComponent },
