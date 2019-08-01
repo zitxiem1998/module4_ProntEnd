@@ -18,7 +18,8 @@
             <div class="controlers-wrapper">
                 <!-- Account name -->
                 <mat-form-field class="example-full-width">
-                    <input matInput placeholder="Account name" formControlName="fullName"><mat-icon matSuffix>person</mat-icon>
+                    <input matInput placeholder="Account name" formControlName="fullName">
+                    <mat-icon matSuffix>person</mat-icon>
                     <mat-error *ngIf="handleError('fullName', 'required')">
                         You must provide a<strong>account name</strong>
                     </mat-error>
@@ -30,7 +31,8 @@
 
                 <!--Account's age -->
                 <mat-form-field class="example-full-width">
-                    <input matInput placeholder="Age" formControlName="age"><mat-icon matSuffix>cake</mat-icon>
+                    <input matInput placeholder="Age" formControlName="age">
+                    <mat-icon matSuffix>cake</mat-icon>
                     <mat-error *ngIf="handleError('age', 'required')">
                         Age is required and must from 18 to 70 years old
                     </mat-error>
@@ -40,7 +42,8 @@
 
                 <!-- Phone Number -->
                 <mat-form-field class="example-full-width">
-                    <input matInput placeholder="Phone Number" formControlName="phone"><mat-icon matSuffix>settings_cell</mat-icon>
+                    <input matInput placeholder="Phone Number" formControlName="phone">
+                    <mat-icon matSuffix>settings_cell</mat-icon>
                     <mat-error *ngIf="handleError('phone', 'required')">
                         You must provide a <strong>Phone Number</strong>
                     </mat-error>
@@ -52,12 +55,13 @@
 
             </div>
         </mat-card>
-
+        
         <mat-card>
             <div class="controlers-wrapper">
                 <!--Account's Address-->
                 <mat-form-field class="example-full-width">
-                    <input matInput placeholder="Address" formControlName="address"><mat-icon matSuffix>room</mat-icon>
+                    <input matInput placeholder="Address" formControlName="address">
+                    <mat-icon matSuffix>room</mat-icon>
                     <mat-error *ngIf="handleError('address', 'required')">
                         You must provide a <strong>Address</strong>
                     </mat-error>
@@ -77,7 +81,8 @@
 
                 <!--Account's email-->
                 <mat-form-field class="example-full-width">
-                    <input matInput placeholder="Email" formControlName="email"><mat-icon matSuffix>sms</mat-icon>
+                    <input matInput placeholder="Email" formControlName="email">
+                    <mat-icon matSuffix>sms</mat-icon>
                     <mat-error *ngIf="handleError('email', 'required')">
                         Email is required </mat-error>
                     <mat-error *ngIf="handleError('email', 'email')">

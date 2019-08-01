@@ -115,7 +115,10 @@ export function getAuthServiceConfigs() {
     CommonModule,
     RouterModule,
     NgbModule,
-    MatExpansionModule
+    MatExpansionModule,
+
+    MatGridListModule,
+    MatListModule
   ],
   providers: [
     {
